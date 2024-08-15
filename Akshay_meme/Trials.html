@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay_MEME</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(57, 55, 55, 0.627);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            height: 90%;
+            background-color: rgb(27, 26, 26);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .left-to-right, .right-to-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 300px;
+        }
+        .left-to-right img, .right-to-left img {
+            height: 12.57rem;
+        }
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 500px;
+            overflow: hidden; /* Ensures no overflow causes layout shifts */
+        }
+        .center img {
+            display: block; /* Ensures the image is a block element */
+            width: 100%; /* Ensure the image takes up the entire container width */
+            height: 100%; /* Fixed height */
+            object-fit: cover; /* Maintains aspect ratio */
+        }
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-to-right">
+            <img src="https://images.pexels.com/photos/2648125/pexels-photo-2648125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="image3" id="change_img_one">
+        </div>
+        <div class="center">
+            <img src="./image1.png" alt="Before" id="toggleImage" class="image1">
+            <button class="button" onclick="toggleColor()">Click Me!</button>
+        </div>
+        <div class="right-to-left">
+            <img src="https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="image4" id="change_img_two">
+        </div>
+    </div>
+    <audio id="audioElement" src="./Memeaudio.mp3"></audio>
+
+    <script>
+        function toggleColor() {
+            const button = document.querySelector('.button');
+            const imgElement = document.getElementById('toggleImage');
+            const imgElement_LR = document.getElementById('change_img_one');
+            const imgElement_RL = document.getElementById('change_img_two');
+
+            playaudio();
+
+            if (button.style.backgroundColor === 'red') {
+                button.style.backgroundColor = 'blue';
+                imgElement.src = './image2.png';
+                imgElement.classList.remove('image1');
+                imgElement.classList.add('image2');
+                imgElement_LR.src = './image4_flip.jpg';
+                imgElement_RL.src = './image3_Flip.jpg';
+            } else {
+                button.style.backgroundColor = 'red';
+                imgElement.src = './image1.png';
+                imgElement.classList.remove('image2');
+                imgElement.classList.add('image1');
+                imgElement_LR.src = 'https://images.pexels.com/photos/2648125/pexels-photo-2648125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+                imgElement_RL.src = 'https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+            }
+        }
+
+        function playaudio() {
+            const audio = document.getElementById('audioElement');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

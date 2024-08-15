@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(136, 121, 121);
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        .card{
+            background-color: rgb(159, 145, 145);
+            width: 85%;
+            height: 90%;
+            display: flex;
+         
+        }
+        .left-side{
+           
+            /*background-color: aqua;*/
+            display: flex;
+            justify-content: start;
+            width: 50%;
+        }
+        .right-side{
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-content: space-around;
+            width: 50%;
+            align-items: center;
+            
+        }
+        .heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .social-links{
+            display: flex;
+            flex-direction: column;
+            /*margin-left: -25rem;*/
+            gap: 0.8rem;
+            background-color: rgba(91, 60, 60, 0.4);
+            width: 37rem;
+            border: none;
+            border-radius: 1rem ;
+            
+        }
+        button{
+            width: 9rem;
+            height: 4rem;
+            font-weight: 500;
+            font-size: 1.2rem;
+            background-color: rgb(9, 7, 7);
+            color: azure;
+            border-radius: 12rem;
+            border: none;
+            transition: all 150ms ease-in;
+            font-style: oblique;
+        }
+        button:hover{
+            box-shadow: 4px 4px 20px black;
+            cursor: pointer;
+        }
+        .link_card{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1rem;
+            
+        }
+        .link_card a{
+            margin-top: 1.3rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-left: -12rem;
+        }
+        .link_card img{
+            height: 4rem;
+            cursor: pointer;
+        }
+
+        .social-links h2{
+            margin-left: 1rem;
+        }
+
+        h1{
+            font-size: 3.6rem;
+            font-weight: 700;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="left-side">
+                <img src="./black.webp" alt="" href="https://www.instagram.com">
+            </div>
+            <div class="right-side">
+                <div class="heading">
+                    <h1>Vaibhav Goyal</h1>
+                    <h3>Designation</h3>
+                </div>
+                <div class="social-links">
+                    <h2>Find Me on</h2>
+                    <div class="link_card">
+                        <img src="https://www.svgrepo.com/show/452229/instagram-1.svg" alt="" > <a href="https://www.instagram.com">Instagram</a>
+                        <img src="https://img.icons8.com/?size=50&id=phOKFKYpe00C&format=png" alt=""> <a href="https://x.com/home">X</a>
+                        <img src="https://img.icons8.com/?size=48&id=xuvGCOXi8Wyg&format=png" alt=""> <a href="https://www.linkedin.com">LinkedIn</a>
+                    </div>
+                </div>
+                <button>Let's Chat</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
