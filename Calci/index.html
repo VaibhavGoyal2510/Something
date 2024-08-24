@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <div class="top">
+
+            <div class="answer-box" id="display"></div>
+        </div>
+
+        <div class="bottom">
+
+            <button class="boxes" id="blue" onclick="appendToDisplay('/')">/</button>
+            <button class="boxes" id="white" onclick="appendToDisplay('7')">7</button>
+            <div class="boxes" id="white" onclick="appendToDisplay('8')">8</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('9')">9</div>
+            <div class="boxes" id="blue" onclick="appendToDisplay('*')">*</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('4')">4</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('5')">5</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('6')">6</div>
+            <div class="boxes" id="blue" onclick="appendToDisplay('-')">-</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('1')">1</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('2')">2</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('3')">3</div>
+            <div class="boxes" id="blue" onclick="appendToDisplay('+')">+</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('0')">0</div>
+            <div class="boxes" id="white" onclick="appendToDisplay('.')">.</div>
+            <div class="boxes" id="ans" onclick="clearDisplay()">C</div>
+            <div class="boxes" onclick="calculateResult()" >=</div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
